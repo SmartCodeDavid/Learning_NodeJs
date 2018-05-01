@@ -1,0 +1,25 @@
+{
+  "name": "tblan",
+  "version": "1.0.0",
+  "description": "Node.js www.runoob.com",
+  "main": "index.js",
+  "dependencies": {
+    "color": "^3.0.0",
+    "colors": "^1.2.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runoob/runoob.git"
+  },
+  "author": "tblan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/runoob/runoob/issues"
+  },
+  "homepage": "https://github.com/runoob/runoob#readme"
+}

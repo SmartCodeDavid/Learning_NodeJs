@@ -1,0 +1,9 @@
+{
+  "name": "chapter5",
+  "version": "0.0.1",
+  "description": "A command-file file explorer!",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.2.1"
+  }
+}
