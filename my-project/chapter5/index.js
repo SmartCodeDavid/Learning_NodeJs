@@ -1,7 +1,7 @@
 var fs = require('fs');
 require('colors');
 
-fs.readdir(process.cwd(), function(err, files){
+fs.readdir(__dirname, function(err, files){
   if(err == null) {
     for (var fIndex in files) {
       if (files.hasOwnProperty(fIndex)) {
