@@ -5,6 +5,7 @@ process.on('message', function(m, tcp) {
         worker = tcp;
         worker.on('connection', function(socket) {
             socket.end('handle by child with pid ' + process.pid +'\n');
+            throw new Error('throw exception'); // 假设此处发生异常
         });
     }
 });
@@ -15,7 +16,10 @@ process.on('SIGTERM', function() {
 });
 
 // 处理异常出现
-process.on('uncaughtException', function() {
+process.on('uncaughtException', function(err) {
+    logger.Error(err);
+    // 发送自杀信号
+    process.send({act: 'suicide'});
     // 停止接收新的连接
     worker.close(function() {
         // 所有连接断开后，退出进程
